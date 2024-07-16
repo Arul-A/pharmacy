@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mobile-nav{
+    @apply fixed top-14 left-0 bg-[#2CA801] w-full  
+}
+html{
+    scroll-behavior: smooth;
+  }
