@@ -8,5 +8,10 @@ export default defineConfig({
     host:true,
     port:5173,
   },
+  build: {
+    rollupOptions: {
+      external: ['react-icons/fa']
+    }
+  }
 
 })
