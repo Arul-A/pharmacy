@@ -16,16 +16,13 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h2 className="text-xl font-semibold mb-2">Follow Us</h2>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.facebook.com/arulak.vaithi" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaFacebook size={24} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
-              <FaTwitter size={24} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.instagram.com/arul21021/?igsh=eHhybGY3MjN3NWky" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaInstagram size={24} />
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://wa.me/+91 8072663220" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaWhatsapp size={24} />
             </a>
           </div>

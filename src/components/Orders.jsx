@@ -68,11 +68,11 @@ const Orders = () => {
                 <h1 className='text-center font-bold text-3xl mb-4 mt-5'>Order Your Medicines</h1>
                 <div>
                     <div className='flex flex-col md:flex-row items-center justify-center gap-2 text-xl font-semibold mb-4'>
-                        <p className='text-nowrap md:text-xl'>You can place an order through WhatsApp</p>
+                        <p className='text-nowrap md:text-xl'>You can place an order through WhatsApp.</p>
                         <p className='flex justify-center items-center gap-3'>
-                            Just click the icon
-                            <a href="#">
-                                <img src={whatsapp} alt="whatsapp" className='w-[32px] h-[32px]' />
+                            Click the icon
+                            <a href='https://wa.me/+91 8072663220' target='_blank' rel="noreferrer">
+                                <img src={whatsapp} alt="whatsapp" className='w-[32px] h-[32px]'/>
                             </a>
                         </p>
                     </div>
@@ -95,9 +95,7 @@ const Orders = () => {
                                 {!file && (
                                     <p>No image uploaded</p>
                                 )}
-
                             </div>
-
                         </div>
                         <div>
                             <h2 className='text-xl text-center mt-4 font-semibold'>Enter your details</h2>
@@ -133,12 +131,8 @@ const Orders = () => {
                                     Submit
                                 </button>
                             </form>
-
                         </div>
-
                     </div>
-
-
                     {message && <p className='text-center mt-4'>{message}</p>}
                 </div>
             </div>

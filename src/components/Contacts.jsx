@@ -37,10 +37,10 @@ const Contacts = () => {
                 <p>Email: akarul2100@gmail.com</p>
                 <p>Feel free to reach us the from below links...</p>
                 <div className='flex gap-3 mt-5'>
-                    <a href="#"><img src={insta} alt="instagram" className='w-[32px] h-[32px]' /></a>
-                    <a href="#"><img src={fb} alt="facebook" className='w-[32px] h-[32px]' /></a>
-                    <a href="#"><img src={whatsapp} alt="whatsapp" className='w-[32px] h-[32px]' /></a>
-                    <a href="#"><img src={gmail} alt="whatsapp" className='w-[32px] h-[32px]' /></a>
+                    <a href='https://www.instagram.com/arul21021/?igsh=eHhybGY3MjN3NWky' target='_blank' rel="noreferrer"><img src={insta} alt="instagram" className='w-[32px] h-[32px]' /></a>
+                    <a href="https://www.facebook.com/arulak.vaithi" target='_blank' rel="noreferrer"><img src={fb} alt="facebook" className='w-[32px] h-[32px]'/></a>
+                    <a href='https://wa.me/+91 8072663220' target='_blank' rel="noreferrer"><img src={whatsapp} alt="whatsapp" className='w-[32px] h-[32px]'/></a>
+                    <a href="mailto:akarul2100@gmail.com"><img src={gmail} alt="whatsapp" className='w-[32px] h-[32px]' /></a>
 
                 </div>
             </div>
