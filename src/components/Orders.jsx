@@ -11,6 +11,7 @@ const Orders = () => {
     const [address, setAddress] = useState('');
     const [fileObject, setFileObject] = useState(null);
     const [message, setMessage] = useState('');
+    const [pending, setPending] = useState(false);
 
     const getFile = (e) => {
         setFile(URL.createObjectURL(e.target.files[0]));
@@ -27,13 +28,15 @@ const Orders = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setPending(true);
+        setMessage('Please wait...');
 
         try {
             // Upload the file to ImgBB and get the URL
             const formData = new FormData();
             formData.append('image', fileObject);
 
-            const imgbbApiKey = '887f90fb738c65c2efbb3819ef5b926c';
+            const imgbbApiKey = import.meta.env.VITE_IMGBB_API_KEY;
             const imgbbResponse = await axios.post(`https://api.imgbb.com/1/upload?key=${imgbbApiKey}`, formData);
             const fileURL = imgbbResponse.data.data.url;
 
@@ -46,19 +49,14 @@ const Orders = () => {
             };
 
             // Send email using EmailJS
-            emailjs.send('service_k3ggyvk', 'template_8qk5sw9', emailData, 'bs7HhtKuhui3P-8_A')
-                .then((response) => {
-                    console.log('Email sent successfully!', response.status, response.text);
-                    setMessage("Order placed. We'll reach you soon!");
-                    clearForm();
-                })
-                .catch((error) => {
-                    console.error('Error sending email:', error);
-                    setMessage('Error placing order.');
-                });
+            await emailjs.send('service_k3ggyvk', 'template_8qk5sw9', emailData, import.meta.env.VITE_EMAILJS_USER_ID);
+            setMessage("Order placed. We'll reach you soon!");
+            clearForm();
         } catch (error) {
-            console.error('Error uploading image:', error);
-            setMessage('Error uploading image.');
+            console.error('Error:', error);
+            setMessage('Error placing order. Please try again.');
+        } finally {
+            setPending(false);
         }
     };
 
@@ -127,8 +125,8 @@ const Orders = () => {
                                     className='w-full md:w-[300px] h-[100px] p-2 rounded border mb-4'
                                     required
                                 ></textarea>
-                                <button type='submit' className='bg-blue-500 text-white py-2 px-4 rounded'>
-                                    Submit
+                                <button type='submit' disabled={pending} className='bg-blue-500 text-white py-2 px-4 rounded'>
+                                    {pending ? 'Submitting...' : 'Submit'}
                                 </button>
                             </form>
                         </div>
