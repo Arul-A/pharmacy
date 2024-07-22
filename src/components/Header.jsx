@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/logo.png'
 import '../App.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [toggleMenu,setToggleMenu] = useState(false)
@@ -14,12 +15,12 @@ const Header = () => {
 
             <nav className='hidden md:block'>
                 <ul className='flex justify-center items-center gap-3'>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#home">Home</a></li>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#orders">Buy Now</a></li>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#services">Services</a></li>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#doctors">Doctors</a></li>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#booking">Book Appointment</a></li>
-                    <li className='hover:bg-[#2CA801] hover:text-gray-200 p-2'><a href="#contacts">Contacts</a></li>
+                    <Link to='/' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Home</Link>
+                    <Link to='/orders' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Buy now</Link>
+                    <Link to='/services' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Services</Link>
+                    <Link to='/doctors' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Doctors</Link>
+                    <Link to='/booking' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Book Appointment</Link>
+                    <Link to='/contacts' className='hover:bg-[#2CA801] hover:text-gray-200 p-2'>Contacts</Link>
                 </ul>
 
             </nav>
@@ -29,12 +30,12 @@ const Header = () => {
             </button>
             {toggleMenu && <nav className='block md:hidden mobile-nav'>
                 <ul className='flex flex-col justify-center items-center gap-3 m-5'>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#home">Home</a></li>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#orders">Buy Now</a></li>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#services">Services</a></li>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#doctors">Doctors</a></li>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#booking">Book Appointment</a></li>
-                    <li className='hover:border-b-2 hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}><a href="#contacts">Contacts</a></li>
+                <Link to='/' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Home</Link>
+                    <Link to='/orders' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Buy now</Link>
+                    <Link to='/services' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Services</Link>
+                    <Link to='/doctors' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Doctors</Link>
+                    <Link to='/booking' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Book Appointment</Link>
+                    <Link to='/contacts' className='hover:bg-[#2CA801] hover:text-gray-200 p-2' onClick={()=>setToggleMenu(!toggleMenu)}>Contacts</Link>
                 </ul>
 
             </nav> }

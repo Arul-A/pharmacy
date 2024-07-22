@@ -3,6 +3,7 @@ import sarah from '../images/sarah.avif';
 import lee from '../images/Lee.jpg';
 import david from '../images/David.jpg';
 import emily from '../images/emily.avif';
+import { Link } from 'react-router-dom';
 
 const Doctors = () => {
   const doctors = [
@@ -52,7 +53,7 @@ const Doctors = () => {
             <p className='text-center mb-2'>{doctor.description}</p>
             <p className='text-sm text-gray-700'><strong>Day:</strong> {doctor.days}</p>
             <p className='text-sm text-gray-700'><strong>Time:</strong> {doctor.time}</p>
-            <p className='text-center mt-4 text-blue-600'>You can book appointments with {doctor.name} through our booking system.</p>
+            <Link to='/booking' className='border-2 border-gray-50 bg-blue-500 px-2 py-1 rounded-xl mt-2 hover:bg-blue-900 text-white'>Book Appointment</Link>
           </div>
         ))}
       </div>

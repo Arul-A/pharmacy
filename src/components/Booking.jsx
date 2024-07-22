@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
 
 const Booking = () => {
   const [name, setName] = useState('');
@@ -44,7 +45,7 @@ const Booking = () => {
     <section id='booking' className='flex flex-col justify-center items-center bg-[#B1CBE4] py-12 px-6 md:px-0'>
       <div className='bg-white p-8 rounded-lg shadow-md w-full md:w-1/2 lg:w-1/3'>
         <h1 className='text-2xl font-bold text-center mb-6'>Book an Appointment</h1>
-        <p className='text-center mb-6'>Kindly check our <a href="#doctors" className="text-blue-500 underline">doctors page</a> before booking an appointment.</p>
+        <p className='text-center mb-6'>Kindly check our <Link to='/doctors' className="text-blue-500 underline">doctors page</Link> before booking an appointment.</p>
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div>
             <label htmlFor='name' className='block text-sm font-medium text-gray-700'>

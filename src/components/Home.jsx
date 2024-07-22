@@ -3,6 +3,7 @@ import bg from '../images/logo.png';
 import insta from '../images/insta.png';
 import fb from '../images/fb.png';
 import whatsapp from '../images/whatsapp.png';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -18,12 +19,9 @@ const Home = () => {
                 <p className='py-2 text-xl md:text-lg'>At Green Plus Pharmacy, we are dedicated to providing you with the highest quality pharmaceutical care.</p>
                 <p className='text-xl md:text-lg'>Our mission is to enhance the well-being of our community by offering a wide range of health products, personalized services, and expert advice.</p>
                 <div className='mt-8 flex gap-4'>
-                    <a href="#orders" className='bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full shadow-md transition duration-300 block text-center'>
-                        Buy Now
-                    </a>
-                    <a href="#booking" className='bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full shadow-md transition duration-300 block text-center'>
-                        Book Appointment
-                    </a>
+                    <Link to='/orders' className='bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full shadow-md transition duration-300 block text-center'>Buy now</Link>
+                    
+                    <Link to='/booking' className='bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full shadow-md transition duration-300 block text-center'>Booking Appointment</Link>
                 </div>
                 <p className='mt-4 text-xl'>Follow Us:</p>
                 <div className='icons flex gap-4 text-4xl mt-2'>
