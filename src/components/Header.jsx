@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="bg-[#3FA6EB] flex justify-between items-center px-4 py-2 text-white fixed w-full">
             <div className='flex justify-center items-center md:gap-6 gap-2 md:ml-6'>
-                <img src={logo} alt="logo" className='w-10 h-10 rounded-full' />
+                <Link to='/'><img src={logo} alt="logo" className='w-10 h-10 rounded-full cursor-pointer' /></Link>
                 <p className='text-xl font-bold'>Green Plus Pharmacy</p>
             </div>
 
