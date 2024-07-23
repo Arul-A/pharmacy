@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <section id='home' className="bg-[#B1CBE4] flex-col md:flex-row flex justify-between items-center px-10 py-16">
             <div className='w-1/2 flex items-center justify-center'>
-                <img src={bg} alt="bg" className='w-[200px] h-[200px] md:w-[400px] md:h-[350px] rounded-full' />
+                <Link to='/'><img src={bg} alt="bg" className='w-[200px] h-[200px] md:w-[400px] md:h-[350px] rounded-full' /></Link>
             </div>
             <div className='w-full md:w-1/2 px-4 py-5 flex flex-col justify-center items-center'>
                 <h2 className='text-3xl font-bold mb-1'>Green Plus Pharmacy,</h2>
